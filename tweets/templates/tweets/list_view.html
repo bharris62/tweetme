@@ -7,6 +7,10 @@
 <body>
     {% for tweet in object_list%}
         <h3>{{ tweet.content }}</h3>
+        <h4>{{ tweet.user }}</h4>
+        <h6>{{ tweet.timestamp }}</h6>
+        {{ tweet.timestamp|timesince }} <br>
+        <hr>
     {% endfor %}
 </body>
 </html>
